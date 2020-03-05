@@ -7,4 +7,4 @@ number = input("Введите любое целое положительное 
 nn = int(2*str(number))
 nnn = int(3*str(number))
 my_sum = int(number) + nn + nnn
-print("n + nn + nnn =", str(number), "+", nn, "+", nnn, "=", my_sum)
+print("n + nn + nnn =", number, "+", nn, "+", nnn, "=", my_sum)
