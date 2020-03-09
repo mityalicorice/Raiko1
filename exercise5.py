@@ -35,3 +35,16 @@ if occurs: # В рейтинге уже есть такое число
 else: # В рейтинге нет такого числа
     ratings.insert(0, new_rating) # Добавляется новое число в начало рейтинга
     print('Рейтинг обновлён:', ratings)
+
+# Если нужен убывающий рейтинг:
+#
+# ratings = [8, 9, 26, 19, 1, 2, 3, 3, 20, 71, 71, 5]
+#
+# print('Текущие значения:', sorted(ratings, reverse=True))
+#
+# new_rating = int(input('Добавить значение (число): '))
+#
+# ratings.append(new_rating)
+#
+# print('Рейтинг обновлён:', sorted(ratings, reverse=True))
+
