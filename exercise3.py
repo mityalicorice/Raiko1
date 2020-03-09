@@ -26,23 +26,22 @@ while up_and_running == 'y': # Работаем ли дальше
 
         month_input = input('Введите месяц в виде целого числа от 1 до 12: ')
         while month_input.isdigit(): # Проверяем, что пользователь ввёл число
-            if int(month_input) in all_months:
-                if int(month_input) in winter:
-                    print(wi)
-                    up_and_running = input('Может, ещё раз? (y/n): ')
-                    break
-                elif int(month_input) in spring:
-                    print(sp)
-                    up_and_running = input('Может, ещё раз? (y/n): ')
-                    break
-                elif int(month_input) in summer:
-                    print(su)
-                    up_and_running = input('Может, ещё раз? (y/n): ')
-                    break
-                elif int(month_input) in fall:
-                    print(fa)
-                    up_and_running = input('Может, ещё раз? (y/n): ')
-                    break
+            if int(month_input) in winter:
+                print(wi)
+                up_and_running = input('Может, ещё раз? (y/n): ')
+                break
+            elif int(month_input) in spring:
+                print(sp)
+                up_and_running = input('Может, ещё раз? (y/n): ')
+                break
+            elif int(month_input) in summer:
+                print(su)
+                up_and_running = input('Может, ещё раз? (y/n): ')
+                break
+            elif int(month_input) in fall:
+                print(fa)
+                up_and_running = input('Может, ещё раз? (y/n): ')
+                break
             else:
                 month_input = input('Такого месяца нет. Введите месяц в виде целого числа от 1 до 12: ')
         else:
