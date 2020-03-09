@@ -1,2 +1,2 @@
 # Raiko Georgiy
-# Python lesson 1
+# Python lessons
