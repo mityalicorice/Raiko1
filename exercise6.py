@@ -20,3 +20,44 @@
 “количество”: [5, 2, 7],
 “ед”: [“шт.”]
 }"""
+from typing import Dict, Any
+
+items = []
+i = 1
+up_and_running = 'да'
+properties = ['название', 'цена', 'количество', 'ед']
+while up_and_running == 'да': # Работаем ли дальше
+
+    print('Заполните данные о товаре: ')
+    name = input("Название: ")
+    price = input("Цена: ")
+    count = input("Количество: ")
+    units = input("Единицы: ")
+
+    #items.append(zip(properties, [name, price, count, units]))
+    items.append((i, {
+        "название": name,
+        "цена": price,
+        "количество": count,
+        "ед": units
+    }))
+    i = i+1
+    up_and_running = input('Добавить ещё один товар? (да/нет) ')
+    while up_and_running not in ['да', 'нет']:
+        up_and_running = input('Пожалуйста, введите да/нет')
+
+# analitics = dict(zip(properties, [[],[],[],[]]))
+analitics = {
+    'название': [],
+    'цена': [],
+    'количество': [],
+    'ед': [],
+}
+print(items)
+
+for el in items:
+    for k, v in el[1].items():
+
+        analitics[k].append(v)
+
+print('Аналитика:\n {}'.format(analitics))
