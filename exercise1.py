@@ -7,11 +7,9 @@ while up_and_running == 'да':
     def division():
         num_1 = float(input('Введите делимое: '))
         num_2 = float(input('Введите делитель: '))
-        if num_2 == 0:
+        while num_2 == 0:
             print('Делить на ноль нельзя!')
             num_2 = float(input('Введите другой делитель: '))
-        else:
-            pass
         num_3 = num_1 / num_2
         return num_3
 
