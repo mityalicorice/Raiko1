@@ -27,12 +27,6 @@ while up_and_running == 'да':
         except ValueError:
             y_inp = input('Введено неверное значение! Введите целое отрицательное число y: ')
 
-        # try:
-        #     x = float(x_inp)
-        # except (TypeError, ValueError):
-        #     x_inp = input('Введите действительное положительное число x: ')
-    # y = input('Введите целое отрицательное число y: ')
-
     my_func(x, y)
 
     up_and_running = input('Посчитать ещё что-нибудь? (да/нет) ')
