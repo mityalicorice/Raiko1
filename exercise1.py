@@ -16,4 +16,3 @@ while up_and_running == 'да':
     result = division()
     print('Результат деления:', result)
     up_and_running = input('Поделить ещё что-нибудь? (да/нет) ')
-
