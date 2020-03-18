@@ -2,3 +2,10 @@
 числа от 100 до 1000 (включая границы). Необходимо получить результат вычисления произведения всех элементов списка.
 Подсказка: использовать функцию reduce()."""
 
+from functools import reduce
+
+all_nums = [num for num in range(100, 1001) if num % 2 == 0]
+
+result = reduce(lambda a, b: a * b, all_nums)
+
+print(result)
