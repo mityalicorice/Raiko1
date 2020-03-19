@@ -17,7 +17,7 @@ with open('my_file6.txt', 'r', encoding='utf-8') as f_obj:
     classes = list(all_subjects.values())  # Количество занятий одной строкой
 
 
-    def classes_sum(subject):
+    def classes_sum(subject):  # Функция для суммирования всех чисел в строке
         temp = '0'  # В эту переменную будет познаково набираться число для суммирования
         sums = 0  # В эту переменную будет сохраняться сумма чисел по всей строке
         for ch in subject:
