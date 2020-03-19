@@ -10,3 +10,27 @@
 Пример словаря:
 {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}"""
 
+with open('my_file6.txt', 'r', encoding='utf-8') as f_obj:
+    a = f_obj.readlines()  # Сохраняется каждая строка как элемент списка 'a'
+    all_subjects = dict(line.split(':') for line in a)  # Создаётся словарь = {'Предмет' : 'количество занятий'}
+    subjects = list(all_subjects.keys())  # Отдельно список предметов
+    classes = list(all_subjects.values())  # Количество занятий одной строкой
+
+
+    def classes_sum(subject):
+        temp = '0'  # В эту переменную будет познаково набираться число для суммирования
+        sums = 0  # В эту переменную будет сохраняться сумма чисел по всей строке
+        for ch in subject:
+            if ch.isdigit():
+                temp += ch  # Если это цифра, то добавляем её в набираемое число
+            else:
+                sums += int(temp)  # Если это не цифра, то добавляем набираемое число к уже имеющейся сумме чисел
+                temp = '0'  # И обнуляем набираемое число
+        return sums + int(temp)
+
+
+    print('Всего предметов:', len(subjects))
+    i = 0
+    while i < len(subjects):
+        print(subjects[i], '—', classes_sum(classes[i]))  # Эта строка выводит количество занятий по каждому предмету
+        i += 1
